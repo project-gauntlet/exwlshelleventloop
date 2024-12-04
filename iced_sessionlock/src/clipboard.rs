@@ -55,7 +55,7 @@ impl SessionLockClipboard {
                 match result {
                     Ok(()) => {}
                     Err(error) => {
-                        log::warn!("error writing to clipboard: {error}");
+                        tracing::warn!("error writing to clipboard: {error}");
                     }
                 }
             }

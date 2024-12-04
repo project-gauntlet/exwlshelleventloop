@@ -24,4 +24,3 @@ thiserror.workspace = true
 sessionlockev.workspace = true
 futures.workspace = true
 window_clipboard.workspace = true
-log.workspace = true

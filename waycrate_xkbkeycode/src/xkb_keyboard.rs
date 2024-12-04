@@ -142,7 +142,7 @@ impl Context {
         let keymap = XkbKeymap::from_fd(&self.context, fd, size);
         let state = keymap.as_ref().and_then(XkbState::new_wayland);
         if keymap.is_none() || state.is_none() {
-            log::warn!("failed to update xkb keymap");
+            tracing::warn!("failed to update xkb keymap");
         }
         self.state = state;
         self.keymap = keymap;
@@ -444,7 +444,7 @@ fn byte_slice_to_smol_str(bytes: &[u8]) -> Option<SmolStr> {
     std::str::from_utf8(bytes)
         .map(SmolStr::new)
         .map_err(|e| {
-            log::warn!(
+            tracing::warn!(
                 "UTF-8 received from libxkbcommon ({:?}) was invalid: {e}",
                 bytes
             )
