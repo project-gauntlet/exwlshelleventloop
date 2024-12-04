@@ -18,7 +18,7 @@ authors = [
   "Aakash Sen Sharma <aakashsensharma@gmail.com>",
 ]
 edition = "2021"
-version = "0.13.0"
+version = "0.13.99"
 license = "MIT"
 repository = "https://github.com/waycrate/exwlshelleventloop"
 description = "Wayland extra shell lib"
@@ -26,14 +26,14 @@ keywords = ["wayland", "wlroots"]
 readme = "README.md"
 
 [workspace.dependencies]
-layershellev = { version = "0.13.0", path = "./layershellev" }
-sessionlockev = { version = "0.13.0", path = "./sessionlockev" }
+layershellev = { path = "./layershellev" }
+sessionlockev = { path = "./sessionlockev" }
 
-iced_layershell = { version = "0.13.0", path = "./iced_layershell" }
-iced_layershell_macros = { version = "0.13.0", path = "./iced_layershell_macros" }
-iced_sessionlock = { version = "0.13.0", path = "./iced_sessionlock" }
-iced_sessionlock_macros = { version = "0.13.0", path = "./iced_sessionlock_macros" }
-waycrate_xkbkeycode = { version = "0.13.0", path = "./waycrate_xkbkeycode" }
+iced_layershell = { path = "./iced_layershell" }
+iced_layershell_macros = { path = "./iced_layershell_macros" }
+iced_sessionlock = { path = "./iced_sessionlock" }
+iced_sessionlock_macros = { path = "./iced_sessionlock_macros" }
+waycrate_xkbkeycode = { path = "./waycrate_xkbkeycode" }
 
 tempfile = "3.14.0"
 thiserror = "1.0.69"
@@ -67,17 +67,23 @@ rwh_05 = { package = "raw-window-handle", version = "0.5.2", features = [
 ] }
 rwh_06 = { package = "raw-window-handle", version = "0.6", features = ["std"] }
 
-iced = "0.13"
-iced_runtime = { version = "0.13", features = ["multi-window"] }
+#iced = "0.13.99"
+iced = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13" }
+#iced_runtime = { version = "0.13.99", features = ["multi-window"] }
+iced_runtime = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13", features = ["multi-window"] }
 #iced_style = "0.13"
-iced_core = "0.13"
-iced_renderer = "0.13"
-iced_futures = "0.13"
-iced_graphics = "0.13"
+#iced_core = "0.13.99"
+iced_core = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13" }
+#iced_renderer = "0.13.99"
+iced_renderer = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13" }
+#iced_futures = "0.13.99"
+iced_futures = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13" }
+#iced_graphics = "0.13.99"
+iced_graphics = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13" }
+
 window_clipboard = "0.4.1"
 
 bitflags = "2.6.0"
-log = "0.4.22"
 
 xkbcommon-dl = "0.4.2"
 smol_str = "0.2.2" #NOTE: follow iced

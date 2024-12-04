@@ -652,7 +652,7 @@ impl<T> Dispatch<wl_keyboard::WlKeyboard, ()> for WindowState<T> {
                     context.set_keymap_from_fd(fd, size as usize)
                 }
                 WEnum::Value(KeymapFormat::NoKeymap) => {
-                    log::warn!("non-xkb compatible keymap")
+                    tracing::warn!("non-xkb compatible keymap")
                 }
                 _ => unreachable!(),
             },
@@ -925,7 +925,7 @@ impl<T> Dispatch<wl_pointer::WlPointer, ()> for WindowState<T> {
                     ))
                 }
                 WEnum::Unknown(unknown) => {
-                    log::warn!(target: "sessionlockev", "{}: invalid pointer axis: {:x}", pointer.id(), unknown);
+                    tracing::warn!(target: "sessionlockev", "{}: invalid pointer axis: {:x}", pointer.id(), unknown);
                 }
             },
             wl_pointer::Event::AxisStop { time, axis } => match axis {
@@ -951,7 +951,7 @@ impl<T> Dispatch<wl_pointer::WlPointer, ()> for WindowState<T> {
                 }
 
                 WEnum::Unknown(unknown) => {
-                    log::warn!(target: "sessionlockev", "{}: invalid pointer axis: {:x}", pointer.id(), unknown);
+                    tracing::warn!(target: "sessionlockev", "{}: invalid pointer axis: {:x}", pointer.id(), unknown);
                 }
             },
             wl_pointer::Event::AxisSource { axis_source } => match axis_source {
@@ -966,7 +966,7 @@ impl<T> Dispatch<wl_pointer::WlPointer, ()> for WindowState<T> {
                     },
                 )),
                 WEnum::Unknown(unknown) => {
-                    log::warn!(target: "sessionlockev", "unknown pointer axis source: {:x}", unknown);
+                    tracing::warn!(target: "sessionlockev", "unknown pointer axis source: {:x}", unknown);
                 }
             },
             wl_pointer::Event::AxisDiscrete { axis, discrete } => match axis {
@@ -997,7 +997,7 @@ impl<T> Dispatch<wl_pointer::WlPointer, ()> for WindowState<T> {
                 }
 
                 WEnum::Unknown(unknown) => {
-                    log::warn!(target: "sessionlockev", "{}: invalid pointer axis: {:x}", pointer.id(), unknown);
+                    tracing::warn!(target: "sessionlockev", "{}: invalid pointer axis: {:x}", pointer.id(), unknown);
                 }
             },
 
@@ -1423,7 +1423,7 @@ impl<T: 'static> WindowState<T> {
                             ReturnData::RequestSetCursorShape((shape_name, pointer, serial)) => {
                                 if let Some(ref cursor_manager) = cursor_manager {
                                     let Some(shape) = str_to_shape(&shape_name) else {
-                                        log::error!("Not supported shape");
+                                        tracing::error!("Not supported shape");
                                         continue;
                                     };
                                     let device = cursor_manager.get_pointer(&pointer, &qh, ());
@@ -1433,7 +1433,7 @@ impl<T: 'static> WindowState<T> {
                                     let Some(cursor_buffer) =
                                         get_cursor_buffer(&shape_name, &connection, &shm)
                                     else {
-                                        log::error!("Cannot find cursor {shape_name}");
+                                        tracing::error!("Cannot find cursor {shape_name}");
                                         continue;
                                     };
                                     let cursor_surface = wmcompositer.create_surface(&qh, ());
@@ -1468,7 +1468,7 @@ impl<T: 'static> WindowState<T> {
                     ReturnData::RequestSetCursorShape((shape_name, pointer, serial)) => {
                         if let Some(ref cursor_manager) = cursor_manager {
                             let Some(shape) = str_to_shape(&shape_name) else {
-                                log::error!("Not supported shape");
+                                tracing::error!("Not supported shape");
                                 continue;
                             };
                             let device = cursor_manager.get_pointer(&pointer, &qh, ());
@@ -1478,7 +1478,7 @@ impl<T: 'static> WindowState<T> {
                             let Some(cursor_buffer) =
                                 get_cursor_buffer(&shape_name, &connection, &shm)
                             else {
-                                log::error!("Cannot find cursor {shape_name}");
+                                tracing::error!("Cannot find cursor {shape_name}");
                                 continue;
                             };
                             let cursor_surface = wmcompositer.create_surface(&qh, ());
