@@ -33,6 +33,6 @@ bitflags.workspace = true
 calloop.workspace = true
 calloop-wayland-source.workspace = true
 
-log.workspace = true
+tracing.workspace = true
 
 waycrate_xkbkeycode.workspace = true
