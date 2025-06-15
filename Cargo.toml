@@ -19,7 +19,7 @@ authors = [
   "Aakash Sen Sharma <aakashsensharma@gmail.com>",
 ]
 edition = "2024"
-version = "0.14.0-dev"
+version = "0.13.99"
 license = "MIT"
 repository = "https://github.com/waycrate/exwlshelleventloop"
 description = "Wayland extra shell lib"
@@ -27,15 +27,15 @@ keywords = ["wayland", "wlroots"]
 readme = "README.md"
 
 [workspace.dependencies]
-layershellev = { version = "0.14.0-dev", path = "./layershellev" }
-sessionlockev = { version = "0.14.0-dev", path = "./sessionlockev" }
+layershellev = { path = "./layershellev" }
+sessionlockev = { path = "./sessionlockev" }
 
-iced_layershell = { version = "0.14.0-dev", path = "./iced_layershell" }
-iced_exdevtools = { version = "0.14.0-dev", path = "./iced_exdevtools" }
-iced_layershell_macros = { version = "0.14.0-dev", path = "./iced_layershell_macros" }
-iced_sessionlock = { version = "0.14.0-dev", path = "./iced_sessionlock" }
-iced_sessionlock_macros = { version = "0.14.0-dev", path = "./iced_sessionlock_macros" }
-waycrate_xkbkeycode = { version = "0.14.0-dev", path = "./waycrate_xkbkeycode" }
+iced_layershell = { path = "./iced_layershell" }
+iced_exdevtools = { path = "./iced_exdevtools" }
+iced_layershell_macros = { path = "./iced_layershell_macros" }
+iced_sessionlock = { path = "./iced_sessionlock" }
+iced_sessionlock_macros = { path = "./iced_sessionlock_macros" }
+waycrate_xkbkeycode = { path = "./waycrate_xkbkeycode" }
 
 tempfile = "3.20.0"
 thiserror = "2.0.12"
@@ -69,17 +69,27 @@ rwh_05 = { package = "raw-window-handle", version = "0.5.2", features = [
 ] }
 rwh_06 = { package = "raw-window-handle", version = "0.6", features = ["std"] }
 
-iced = { git = "https://github.com/iced-rs/iced.git", default-features = false }
-iced_runtime = { git = "https://github.com/iced-rs/iced.git" }
-#iced_style = "0.13"
-iced_core = { git = "https://github.com/iced-rs/iced.git" }
-iced_program = { git = "https://github.com/iced-rs/iced.git" }
-iced_renderer = { git = "https://github.com/iced-rs/iced.git" }
-iced_futures = { git = "https://github.com/iced-rs/iced.git" }
-iced_graphics = { git = "https://github.com/iced-rs/iced.git" }
-iced_debug = { git = "https://github.com/iced-rs/iced.git" }
-iced_devtools = { git = "https://github.com/iced-rs/iced.git" }
-iced_widget = { git = "https://github.com/iced-rs/iced.git" }
+#iced = "0.13.99"
+iced = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1", default-features = false }
+#iced_runtime = "0.13.99"
+iced_runtime = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_core = "0.13.99"
+iced_core = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_program = "0.13.99"
+iced_program = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_renderer = "0.13.99"
+iced_renderer = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_futures = "0.13.99"
+iced_futures = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_graphics = "0.13.99"
+iced_graphics = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_debug = "0.13.99"
+iced_debug = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_devtools = "0.13.99"
+iced_devtools = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+#iced_widget = "0.13.99"
+iced_widget = { git = "https://github.com/project-gauntlet/iced.git", branch = "gauntlet-0.13.1" }
+
 window_clipboard = "0.4.1"
 
 bitflags = "2.9.0"
@@ -98,3 +108,15 @@ manyhow = { version = "0.11.4", features = ["darling"] }
 proc-macro2 = "1.0.89"
 quote = "1.0.37"
 syn = { version = "2.0.87", features = ["full"] }
+
+#[patch.crates-io]
+#iced = { path = "../../RustroverProjects/iced-fork" }
+#iced_runtime = { path = "../../RustroverProjects/iced-fork/runtime" }
+#iced_core = { path = "../../RustroverProjects/iced-fork/core" }
+#iced_program = { path = "../../RustroverProjects/iced-fork/program" }
+#iced_renderer = { path = "../../RustroverProjects/iced-fork/renderer" }
+#iced_futures = { path = "../../RustroverProjects/iced-fork/futures" }
+#iced_graphics = { path = "../../RustroverProjects/iced-fork/graphics" }
+#iced_debug = { path = "../../RustroverProjects/iced-fork/debug" }
+#iced_devtools = { path = "../../RustroverProjects/iced-fork/devtools" }
+#iced_widget = { path = "../../RustroverProjects/iced-fork/widget" }

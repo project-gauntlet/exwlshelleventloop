@@ -105,7 +105,7 @@ checksum = "e16d2d3311acee920a9eb8d33b8cbc1787ce4a264e85f964c2404b969bdcd487"
 
 [[package]]
 name = "application-launcher"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "gio",
  "iced",
@@ -522,7 +522,7 @@ dependencies = [
 
 [[package]]
 name = "bottom_panel"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "gio",
  "iced",
@@ -873,7 +873,7 @@ dependencies = [
 
 [[package]]
 name = "counter"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_layershell",
@@ -882,7 +882,7 @@ dependencies = [
 
 [[package]]
 name = "counter_lock"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_runtime",
@@ -891,7 +891,7 @@ dependencies = [
 
 [[package]]
 name = "counter_multi"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_layershell",
@@ -1061,8 +1061,9 @@ checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 
 [[package]]
 name = "dpi"
-version = "0.1.1"
-source = "git+https://github.com/iced-rs/winit.git?rev=11414b6aa45699f038114e61b4ddf5102b2d3b4b#11414b6aa45699f038114e61b4ddf5102b2d3b4b"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d8b14ccef22fc6f5a8f4d7d768562a182c04ce9a3b3157b91390b52ddfdf1a76"
 
 [[package]]
 name = "drm"
@@ -1743,8 +1744,8 @@ checksum = "dfa686283ad6dd069f105e5ab091b04c62850d3e4cf5d67debad1933f55023df"
 
 [[package]]
 name = "iced"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_core",
  "iced_debug",
@@ -1760,8 +1761,8 @@ dependencies = [
 
 [[package]]
 name = "iced_beacon"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "bincode",
  "futures",
@@ -1775,8 +1776,8 @@ dependencies = [
 
 [[package]]
 name = "iced_core"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "bitflags 2.9.1",
  "bytes",
@@ -1794,8 +1795,8 @@ dependencies = [
 
 [[package]]
 name = "iced_debug"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_beacon",
  "iced_core",
@@ -1805,8 +1806,8 @@ dependencies = [
 
 [[package]]
 name = "iced_devtools"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_debug",
  "iced_program",
@@ -1816,7 +1817,7 @@ dependencies = [
 
 [[package]]
 name = "iced_exdevtools"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced_debug",
  "iced_program",
@@ -1826,8 +1827,8 @@ dependencies = [
 
 [[package]]
 name = "iced_futures"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "futures",
  "iced_core",
@@ -1840,8 +1841,8 @@ dependencies = [
 
 [[package]]
 name = "iced_graphics"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "bitflags 2.9.1",
  "bytemuck",
@@ -1861,7 +1862,7 @@ dependencies = [
 
 [[package]]
 name = "iced_layershell"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "enumflags2",
  "futures",
@@ -1885,7 +1886,7 @@ dependencies = [
 
 [[package]]
 name = "iced_layershell_macros"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "darling",
  "manyhow",
@@ -1896,8 +1897,8 @@ dependencies = [
 
 [[package]]
 name = "iced_program"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_graphics",
  "iced_runtime",
@@ -1905,8 +1906,8 @@ dependencies = [
 
 [[package]]
 name = "iced_renderer"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -1917,8 +1918,8 @@ dependencies = [
 
 [[package]]
 name = "iced_runtime"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "bytes",
  "iced_core",
@@ -1930,7 +1931,7 @@ dependencies = [
 
 [[package]]
 name = "iced_sessionlock"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "futures",
  "iced",
@@ -1952,7 +1953,7 @@ dependencies = [
 
 [[package]]
 name = "iced_sessionlock_macros"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "darling",
  "manyhow",
@@ -1963,8 +1964,8 @@ dependencies = [
 
 [[package]]
 name = "iced_tiny_skia"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -1980,7 +1981,7 @@ dependencies = [
 
 [[package]]
 name = "iced_virtualkeyboard"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_layershell",
@@ -1991,8 +1992,8 @@ dependencies = [
 
 [[package]]
 name = "iced_wgpu"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "bitflags 2.9.1",
  "bytemuck",
@@ -2012,8 +2013,8 @@ dependencies = [
 
 [[package]]
 name = "iced_widget"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_renderer",
  "iced_runtime",
@@ -2026,8 +2027,8 @@ dependencies = [
 
 [[package]]
 name = "iced_winit"
-version = "0.14.0-dev"
-source = "git+https://github.com/iced-rs/iced.git#89f480bdae951a31944302777b759661ec3c3e83"
+version = "0.13.99"
+source = "git+https://github.com/project-gauntlet/iced.git?branch=gauntlet-0.13.1#39f56309f4624c20218b812a70d6a7c0e7e698e8"
 dependencies = [
  "iced_debug",
  "iced_program",
@@ -2211,7 +2212,7 @@ dependencies = [
 
 [[package]]
 name = "input_regions"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_layershell",
@@ -2349,7 +2350,7 @@ dependencies = [
 
 [[package]]
 name = "layershellev"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "bitflags 2.9.1",
  "calloop 0.14.2",
@@ -2667,7 +2668,7 @@ dependencies = [
 
 [[package]]
 name = "multi_window"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_layershell",
@@ -3573,7 +3574,7 @@ dependencies = [
 
 [[package]]
 name = "redraw"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "iced",
  "iced_layershell",
@@ -3836,7 +3837,7 @@ dependencies = [
 
 [[package]]
 name = "sessionlockev"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "bitflags 2.9.1",
  "calloop 0.14.2",
@@ -4046,7 +4047,7 @@ checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "starcolorkeyboard"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "bitflags 2.9.1",
  "cairo-rs",
@@ -4756,7 +4757,7 @@ dependencies = [
 
 [[package]]
 name = "waycrate_xkbkeycode"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "bitflags 2.9.1",
  "calloop 0.14.2",
@@ -5414,8 +5415,8 @@ checksum = "271414315aff87387382ec3d271b52d7ae78726f5d44ac98b4f4030c91880486"
 
 [[package]]
 name = "winit"
-version = "0.30.8"
-source = "git+https://github.com/iced-rs/winit.git?rev=11414b6aa45699f038114e61b4ddf5102b2d3b4b#11414b6aa45699f038114e61b4ddf5102b2d3b4b"
+version = "0.30.99"
+source = "git+https://github.com/project-gauntlet/winit.git?rev=49690da86351375d2e2ebe8b891cdb90a019b996#49690da86351375d2e2ebe8b891cdb90a019b996"
 dependencies = [
  "ahash",
  "android-activity",
@@ -5648,7 +5649,7 @@ dependencies = [
 
 [[package]]
 name = "zbus_invoked_widget"
-version = "0.14.0-dev"
+version = "0.13.99"
 dependencies = [
  "futures",
  "iced",
